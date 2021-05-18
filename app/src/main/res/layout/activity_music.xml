@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background"
+    tools:context=".MusicActivity">
+
+    <LinearLayout
+        android:background="#33EEEEEE"
+        android:id="@+id/linearLayout"
+        android:layout_width="389dp"
+        android:layout_height="27dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/Control_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/songList"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/timeStartTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="00:00"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="204dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="32dp" />
+
+        <TextView
+            android:id="@+id/timeEndTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="00:00"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/Control_layout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#33EEEEEE"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageButton
+            android:id="@+id/con_next"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@mipmap/music_next"
+            android:background="#33EEEEEE"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            />
+
+        <ImageButton
+            android:id="@+id/con_play"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@mipmap/music_play_arrow"
+            android:background="#33EEEEEE"
+            android:layout_toLeftOf="@id/con_next"
+            android:layout_marginRight="20dp"
+            />
+
+        <ImageButton
+            android:id="@+id/con_pre"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@mipmap/music_previous"
+            android:background="#33EEEEEE"
+            android:layout_toLeftOf="@id/con_play"
+            android:layout_marginRight="20dp"
+            />
+
+        <TextView
+            android:id="@+id/songName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="告别地球"
+            android:layout_toRightOf="@id/con_song"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/singer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="周杰伦"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:layout_below="@id/songName"
+            android:layout_alignLeft="@id/songName"
+            android:layout_marginTop="10dp"
+            />
+
+        <ImageButton
+            android:id="@+id/con_song"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="#33EEEEEE"
+            app:srcCompat="@mipmap/audiotrack" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/songList"
+        android:layout_width="match_parent"
+        android:layout_height="580dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ListView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+

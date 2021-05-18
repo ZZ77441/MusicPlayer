@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    app:cardBackgroundColor="@color/colorPink"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="1dp"
+    app:contentPadding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/CardNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="1"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/CardViewSong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:layout_toEndOf="@+id/CardNum"
+            android:text="玫瑰花的葬礼"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/CardViewSinger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="许嵩"
+            android:textSize="14sp"
+            android:textColor="#888"
+            android:layout_below="@id/CardViewSong"
+            android:layout_alignLeft="@id/CardViewSong"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/CardLine"
+            android:layout_width="2dp"
+            android:layout_height="18dp"
+            android:background="#888"
+            android:layout_toRightOf="@id/CardViewSinger"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignTop="@id/CardViewSinger" />
+        <TextView
+            android:id="@+id/CardAlbum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="专辑名称"
+            android:layout_toRightOf="@id/CardLine"
+            android:layout_alignTop="@id/CardViewSinger"
+            android:textSize="14sp"
+            android:textColor="#888"
+            android:ellipsize="end"
+            android:singleLine="true"/>
+        <TextView
+            android:id="@+id/CardDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/CardViewSinger"
+            android:layout_alignParentRight="true"
+            android:text="04:30"
+            android:textSize="14sp"
+            android:textColor="#888"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
